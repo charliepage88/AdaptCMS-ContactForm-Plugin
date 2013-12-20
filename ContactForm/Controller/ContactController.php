@@ -78,7 +78,7 @@ class ContactController extends AppController
 						));
 						$email->send();
 
-						$this->Session->setFlash(Configure::read('ContactForm.success_message'), 'flash_success');
+						$this->Session->setFlash(Configure::read('ContactForm.success_message'), 'success');
 						$this->redirect('/');
 					} catch(Exception $e) {
 						$this->Session->setFlash($e->getMessage(), 'error');
